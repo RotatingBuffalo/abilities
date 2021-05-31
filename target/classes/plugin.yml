@@ -1,0 +1,9 @@
+main: mc.bop.Main
+name: abilities
+version: 1.1
+api-version: 1.16
+commands:
+  giveBopItem:
+    description: Gives one of this plugin's unique items, such as Excaliber or the Dimensional Compass.
+    usage: /giveBopItem Dimensional_Compass
+    permission: bopmcplugin.admin
