@@ -138,7 +138,7 @@ public class EventHandlers implements Listener {
     }
 
     @EventHandler
-    public void onPlayerHit(EntityDamageByEntityEvent e) {
+    public void whip(EntityDamageByEntityEvent e) {
         if (e.getDamager().getType() == EntityType.PLAYER) {
             Player damager = (Player) e.getDamager();
             if (e.getEntity() instanceof LivingEntity) {
