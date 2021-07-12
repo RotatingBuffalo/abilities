@@ -12,6 +12,7 @@ public class GiveBopItem implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+
         if (sender instanceof Player) {
             Player p = (Player) sender;
             for (int x = 0; x < args.length; x++) {
