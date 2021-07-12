@@ -59,7 +59,7 @@ public class EventHandlers implements Listener {
         if (eItem.getItemMeta().getLore() == null) {
             return false;
         }
-        if (eItem.getItemMeta().getLore().get(0).equals(itemToCheckAgainst.itemLore)) {
+        if (eItem.getItemMeta().getLore().get(0).equals(itemToCheckAgainst.getLore())) {
             return true;
         } else {
             return false;
