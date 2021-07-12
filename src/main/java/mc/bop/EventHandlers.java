@@ -6,10 +6,13 @@ import java.util.Arrays;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.Particle;
+import org.bukkit.entity.EntityType;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
+import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.player.PlayerBedEnterEvent;
 import org.bukkit.event.player.PlayerBedLeaveEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
@@ -19,6 +22,7 @@ import org.bukkit.inventory.ItemStack;
 import mc.bop.uniqueItems.BopItem;
 import mc.bop.uniqueItems.DimensionalCompassItem;
 import mc.bop.uniqueItems.ExcaliburItem;
+import mc.bop.uniqueItems.WhipItem;
 
 public class EventHandlers implements Listener {
 
@@ -37,7 +41,7 @@ public class EventHandlers implements Listener {
         }
     }
 
-    private boolean actionCheck(Action a) {
+    private boolean actionVerify(Action a) {
         if (a == null) {
             return false;
         }
@@ -48,14 +52,13 @@ public class EventHandlers implements Listener {
         }
     }
 
-    private boolean itemVerify(ItemStack eItem, Action a, BopItem itemToCheckAgainst) {
+    private boolean itemVerify(ItemStack eItem, BopItem itemToCheckAgainst) {
         if (eItem == null) {
             return false;
         }
         if (eItem.getItemMeta().getLore() == null) {
             return false;
         }
-        actionCheck(a);
         if (eItem.getItemMeta().getLore().get(0).equals(itemToCheckAgainst.itemLore)) {
             return true;
         } else {
@@ -105,7 +108,7 @@ public class EventHandlers implements Listener {
     // Dimensional Compass item.
     @EventHandler
     public void dimCompass(PlayerInteractEvent e) {
-        if (itemVerify(e.getItem(), e.getAction(), new DimensionalCompassItem())) {
+        if (itemVerify(e.getItem(), new DimensionalCompassItem()) && actionVerify(e.getAction())) {
 
             Player p = e.getPlayer();
 
@@ -127,10 +130,25 @@ public class EventHandlers implements Listener {
     // Excalibur
     @EventHandler
     public void lightningSword(PlayerInteractEvent e) {
-        if (itemVerify(e.getItem(), e.getAction(), new ExcaliburItem())) {
+        if (itemVerify(e.getItem(), new ExcaliburItem()) && actionVerify(e.getAction())) {
             Player p = e.getPlayer();
             p.getWorld().strikeLightning(p.getTargetBlock(null, 31).getLocation());
             return;
+        }
+    }
+
+    @EventHandler
+    public void onPlayerHit(EntityDamageByEntityEvent e) {
+        if (e.getDamager().getType() == EntityType.PLAYER) {
+            Player damager = (Player) e.getDamager();
+            if (e.getEntity() instanceof LivingEntity) {
+                LivingEntity damagee = (LivingEntity) e.getEntity();
+                ItemStack itemUsed = damager.getInventory().getItemInMainHand();
+                if (itemVerify(itemUsed, new WhipItem())) {
+                    new PlayerItemConsumeEvent((Player) damagee, new ItemStack(Material.CHORUS_FRUIT));
+
+                }
+            }
         }
     }
 }
