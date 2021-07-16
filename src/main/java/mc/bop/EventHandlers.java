@@ -2,7 +2,6 @@ package mc.bop;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.Particle;
@@ -18,10 +17,13 @@ import org.bukkit.event.player.PlayerBedLeaveEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerItemConsumeEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 
 import mc.bop.uniqueItems.BopItem;
 import mc.bop.uniqueItems.DimensionalCompassItem;
 import mc.bop.uniqueItems.ExcaliburItem;
+import mc.bop.uniqueItems.SoupStaff;
 import mc.bop.uniqueItems.WhipItem;
 
 public class EventHandlers implements Listener {
@@ -34,6 +36,18 @@ public class EventHandlers implements Listener {
                     Material.COOKED_CHICKEN, Material.COOKED_RABBIT, Material.COOKED_MUTTON, Material.COOKED_COD,
                     Material.BEEF, Material.SALMON, Material.PORKCHOP, Material.CHICKEN, Material.RABBIT,
                     Material.MUTTON, Material.COD, Material.RABBIT_STEW, Material.PUFFERFISH, Material.TROPICAL_FISH));
+
+    private ArrayList<PotionEffectType> validPotionTypes = new ArrayList<PotionEffectType>(
+            Arrays.asList(PotionEffectType.SPEED, PotionEffectType.SLOW, PotionEffectType.INCREASE_DAMAGE,
+                    PotionEffectType.JUMP, PotionEffectType.CONFUSION, PotionEffectType.FIRE_RESISTANCE,
+                    PotionEffectType.REGENERATION, PotionEffectType.DAMAGE_RESISTANCE, PotionEffectType.BLINDNESS,
+                    PotionEffectType.HUNGER, PotionEffectType.WEAKNESS, PotionEffectType.POISON,
+                    PotionEffectType.WATER_BREATHING, PotionEffectType.WITHER, PotionEffectType.SATURATION,
+                    PotionEffectType.GLOWING, PotionEffectType.LEVITATION));
+
+    private PotionEffectType getRandomPotionEffect() {
+        return validPotionTypes.get((int) (Math.random() * validPotionTypes.size()) + 1);
+    }
 
     private void explode(Player p) {
         for (int j = 0; j < 8; j++) {
@@ -68,7 +82,7 @@ public class EventHandlers implements Listener {
     }
 
     private boolean nameCheck(String name, Player p) {
-        return p.getDisplayName().equals(name);
+        return p.getPlayerListName().equals(name);
     }
 
     // Adrian is a vegan.
@@ -100,8 +114,10 @@ public class EventHandlers implements Listener {
     @EventHandler
     public void oliverInsomnia(PlayerBedEnterEvent e) {
         if (nameCheck("OliverTheCrow_", e.getPlayer())) {
+
             new PlayerBedLeaveEvent(e.getPlayer(), e.getBed(), true);
             e.setCancelled(true);
+
         }
     }
 
@@ -146,7 +162,20 @@ public class EventHandlers implements Listener {
                 ItemStack itemUsed = damager.getInventory().getItemInMainHand();
                 if (itemVerify(itemUsed, new WhipItem())) {
                     new PlayerItemConsumeEvent((Player) damagee, new ItemStack(Material.CHORUS_FRUIT));
+                }
+            }
+        }
+    }
 
+    @EventHandler
+    public void soupStaff(EntityDamageByEntityEvent e) {
+        if (e.getDamager().getType() == EntityType.PLAYER) {
+            Player damager = (Player) e.getDamager();
+            if (e.getEntity() instanceof LivingEntity) {
+                LivingEntity damagee = (LivingEntity) e.getEntity();
+                ItemStack itemUsed = damager.getInventory().getItemInMainHand();
+                if (itemVerify(itemUsed, new SoupStaff())) {
+                    damagee.addPotionEffect(new PotionEffect(getRandomPotionEffect(), 600, 0));
                 }
             }
         }
