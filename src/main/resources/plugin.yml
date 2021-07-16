@@ -7,3 +7,21 @@ commands:
     description: Gives one of this plugin's unique items, such as Excaliber or the Dimensional Compass.
     usage: /giveBopItem Dimensional_Compass
     permission: bopmcplugin.admin
+permissions:
+  bop.*:
+    description: Gives access to all BopSMP commands.
+    children: 
+      bop.givebopitem: true
+      bop.owotoggle: true
+      bop.owotoggle.others: true
+  bop.givebopitem:
+    description: Enables the givebopitem commmand, allowing the player to give themselves plugin specific items.
+    default: false
+  bop.owotoggle:
+    description: Allows the player to toggle OwOified chat for themselves.
+    default: false
+  bop.owotoggle.others:
+    description: Allows the player to toggle OwOified chat for other players.
+    default: op
+    children:
+      bop.owotoggle: true

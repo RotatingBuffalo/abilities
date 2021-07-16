@@ -36,6 +36,7 @@ public class EventHandlers implements Listener {
                     Material.COOKED_CHICKEN, Material.COOKED_RABBIT, Material.COOKED_MUTTON, Material.COOKED_COD,
                     Material.BEEF, Material.SALMON, Material.PORKCHOP, Material.CHICKEN, Material.RABBIT,
                     Material.MUTTON, Material.COD, Material.RABBIT_STEW, Material.PUFFERFISH, Material.TROPICAL_FISH));
+
     private ArrayList<PotionEffectType> validPotionTypes = new ArrayList<PotionEffectType>(
             Arrays.asList(PotionEffectType.SPEED, PotionEffectType.SLOW, PotionEffectType.INCREASE_DAMAGE,
                     PotionEffectType.JUMP, PotionEffectType.CONFUSION, PotionEffectType.FIRE_RESISTANCE,
@@ -168,7 +169,6 @@ public class EventHandlers implements Listener {
 
     @EventHandler
     public void soupStaff(EntityDamageByEntityEvent e) {
-
         if (e.getDamager().getType() == EntityType.PLAYER) {
             Player damager = (Player) e.getDamager();
             if (e.getEntity() instanceof LivingEntity) {

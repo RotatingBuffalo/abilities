@@ -20,7 +20,7 @@ public class GiveBopItem implements CommandExecutor {
                     p.getInventory().addItem(ItemList.customItems.get(args[x]));
                     return true;
                 } else {
-                    sender.sendMessage(ChatColor.RED + "The item given either does not exist or was improperly typed.");
+                    sender.sendMessage(ChatColor.RED + "That item doesn't exist or you made a typo.");
                 }
             }
             return true;
