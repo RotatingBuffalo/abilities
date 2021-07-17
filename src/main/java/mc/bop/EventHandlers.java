@@ -2,6 +2,8 @@ package mc.bop;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
+
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.Particle;
@@ -12,10 +14,12 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerBedEnterEvent;
 import org.bukkit.event.player.PlayerBedLeaveEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerItemConsumeEvent;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -83,6 +87,14 @@ public class EventHandlers implements Listener {
 
     private boolean nameCheck(String name, Player p) {
         return p.getPlayerListName().equals(name);
+    }
+
+    private String owoify(String s) {
+        final Random random = new Random();
+        final String[] expressions = { ">_<", ":3", "ʕʘ‿ʘʔ", ":D", "._.", ";3", "xD", "ㅇㅅㅇ", "(人◕ω◕)", ">_>", "ÙωÙ",
+                "UwU", "OwO", ":P", "(◠‿◠✿)", "^_^", ";_;", "XDDD", "x3", "(• o •)", "<_<" };
+        return s.replace("l", "w").replace("L", "W").replace("r", "w").replace("R", "W") + " "
+                + expressions[random.nextInt(expressions.length)];
     }
 
     // Adrian is a vegan.
@@ -154,7 +166,7 @@ public class EventHandlers implements Listener {
     }
 
     @EventHandler
-    public void whip(EntityDamageByEntityEvent e) {
+    public void whipEvent(EntityDamageByEntityEvent e) {
         if (e.getDamager().getType() == EntityType.PLAYER) {
             Player damager = (Player) e.getDamager();
             if (e.getEntity() instanceof LivingEntity) {
@@ -179,5 +191,16 @@ public class EventHandlers implements Listener {
                 }
             }
         }
+    }
+
+    @EventHandler
+    public void onPlayerChatMessage(AsyncPlayerChatEvent e) {
+
+        e.setMessage(owoify(e.getMessage()));
+    }
+
+    @EventHandler
+    public static void joinRegister(PlayerJoinEvent e) {
+        Main.addBopData(e.getPlayer());
     }
 }

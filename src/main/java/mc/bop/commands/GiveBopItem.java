@@ -6,7 +6,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import mc.bop.uniqueItems.ItemList;
+import mc.bop.util.ItemList;
 
 public class GiveBopItem implements CommandExecutor {
 
