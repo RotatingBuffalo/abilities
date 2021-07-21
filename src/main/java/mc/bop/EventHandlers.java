@@ -29,6 +29,7 @@ import mc.bop.uniqueItems.DimensionalCompassItem;
 import mc.bop.uniqueItems.ExcaliburItem;
 import mc.bop.uniqueItems.SoupStaff;
 import mc.bop.uniqueItems.WhipItem;
+import mc.bop.util.BopPlayer;
 
 public class EventHandlers implements Listener {
 
@@ -194,13 +195,15 @@ public class EventHandlers implements Listener {
     }
 
     @EventHandler
-    public void onPlayerChatMessage(AsyncPlayerChatEvent e) {
-
-        e.setMessage(owoify(e.getMessage()));
+    public void registerOnJoin(PlayerJoinEvent e) {
+        Main.addPlayer(new BopPlayer(e.getPlayer()));
     }
 
     @EventHandler
-    public static void joinRegister(PlayerJoinEvent e) {
-        Main.addBopData(e.getPlayer());
+    public void onPlayerChatMessage(AsyncPlayerChatEvent e) {
+        BopPlayer p = Main.getBopPlayer(e.getPlayer().getUniqueId());
+        if (p.getOwOtoggle()) {
+            e.setMessage(owoify(e.getMessage()));
+        }
     }
 }

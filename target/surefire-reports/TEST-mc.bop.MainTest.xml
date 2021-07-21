@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="mc.bop.MainTest" time="0.028" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="mc.bop.MainTest" time="0.019" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="16"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-16-jdk/lib"/>
-    <property name="sun.java.command" value="/home/bop/Code/bop/abilities/target/surefire/surefirebooter17037341103801595719.jar /home/bop/Code/bop/abilities/target/surefire 2021-07-16T01-21-23_086-jvmRun1 surefire3991469450169626432tmp surefire_08147888107265066507tmp"/>
+    <property name="sun.java.command" value="/home/bop/Code/bop/abilities/target/surefire/surefirebooter14983384763500114939.jar /home/bop/Code/bop/abilities/target/surefire 2021-07-21T04-54-27_913-jvmRun1 surefire7371471232524526974tmp surefire_015148183907001905490tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/bop/Code/bop/abilities/target/test-classes:/home/bop/Code/bop/abilities/target/classes:/home/bop/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/bop/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/bop/.m2/repository/org/spigotmc/spigot-api/1.16.5-R0.1-SNAPSHOT/spigot-api-1.16.5-R0.1-SNAPSHOT.jar:/home/bop/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/home/bop/.m2/repository/com/google/guava/guava/21.0/guava-21.0.jar:/home/bop/.m2/repository/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar:/home/bop/.m2/repository/net/md-5/bungeecord-chat/1.16-R0.4/bungeecord-chat-1.16-R0.4.jar:/home/bop/.m2/repository/org/yaml/snakeyaml/1.27/snakeyaml-1.27.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -27,7 +27,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/bop/Code/bop/abilities/target/surefire/surefirebooter17037341103801595719.jar"/>
+    <property name="surefire.real.class.path" value="/home/bop/Code/bop/abilities/target/surefire/surefirebooter14983384763500114939.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="16.0.1+9-24"/>
     <property name="user.name" value="bop"/>

@@ -1,33 +1,63 @@
 package mc.bop.util;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import java.util.UUID;
+
+import org.bukkit.Bukkit;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
 public class BopPlayer {
-    private Player me;
-    private boolean owoActive;
-    private boolean insomniac;
+    private OfflinePlayer whoami;
+    private Boolean OwOtoggled = Boolean.valueOf(false);
+
+    public OfflinePlayer getOfflinePlayer() {
+        return whoami;
+    }
+
+    public boolean getOwOtoggle() {
+        return OwOtoggled.booleanValue();
+    }
+
+    public void toggleOwO() {
+        // this is horrifying lmao
+        // i hate wrapper classes i hate wrapper classes i hate them
+        OwOtoggled = Boolean.valueOf(!OwOtoggled.booleanValue());
+    }
 
     public BopPlayer(Player p) {
-        me = p;
-        owoActive = false;
-        insomniac = false;
+        whoami = p;
     }
 
-    public BopPlayer(Player p, boolean owo, boolean insomnia) {
-        me = p;
-        owoActive = owo;
-        insomniac = insomnia;
+    public String save() {
+        String owoState = OwOtoggled.toString();
+        String p = whoami.getUniqueId().toString();
+        String result = "owoState:" + owoState + "\n" + "player:" + p;
+        return result;
     }
 
-    public boolean isOwOActive() {
-        return owoActive;
-    }
-
-    public boolean isInsomniac() {
-        return insomniac;
-    }
-
-    public Player getPlayer() {
-        return me;
+    public void load(File f) {
+        Scanner s;
+        try {
+            s = new Scanner(f);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return;
+        }
+        String[] states = { "", "" };
+        while (s.hasNextLine()) {
+            String currentLine = s.nextLine();
+            for (int i = 0; i < currentLine.length(); i++) {
+                if (currentLine.charAt(i) == ':') {
+                    String attribute = currentLine.substring(i);
+                    states[i] = attribute;
+                }
+            }
+        }
+        this.whoami = Bukkit.getOfflinePlayer(UUID.fromString(states[0]));
+        this.OwOtoggled = Boolean.valueOf(states[1]);
+        s.close();
     }
 }

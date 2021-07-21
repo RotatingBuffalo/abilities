@@ -1,0 +1,98 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/bop/Code/bop/abilities/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210110.0/
+BopItem	src/main/java/mc/bop/uniqueItems/BopItem.java	/^public interface BopItem {$/;"	i
+BopTabCompleter	src/main/java/mc/bop/commands/BopTabCompleter.java	/^public class BopTabCompleter implements TabCompleter {$/;"	c
+DimensionalCompassItem	src/main/java/mc/bop/uniqueItems/DimensionalCompassItem.java	/^    public DimensionalCompassItem() {$/;"	m	class:DimensionalCompassItem
+DimensionalCompassItem	src/main/java/mc/bop/uniqueItems/DimensionalCompassItem.java	/^public class DimensionalCompassItem extends ItemStack implements BopItem {$/;"	c
+EventHandlers	src/main/java/mc/bop/EventHandlers.java	/^public class EventHandlers implements Listener {$/;"	c
+ExcaliburItem	src/main/java/mc/bop/uniqueItems/ExcaliburItem.java	/^    public ExcaliburItem() {$/;"	m	class:ExcaliburItem
+ExcaliburItem	src/main/java/mc/bop/uniqueItems/ExcaliburItem.java	/^public class ExcaliburItem extends ItemStack implements BopItem {$/;"	c
+FeedingHoeItem	src/main/java/mc/bop/uniqueItems/FeedingHoeItem.java	/^    public FeedingHoeItem() {$/;"	m	class:FeedingHoeItem
+FeedingHoeItem	src/main/java/mc/bop/uniqueItems/FeedingHoeItem.java	/^public class FeedingHoeItem extends ItemStack implements BopItem {$/;"	c
+GiveBopItem	src/main/java/mc/bop/commands/GiveBopItem.java	/^public class GiveBopItem implements CommandExecutor {$/;"	c
+IBopSavable	src/main/java/mc/bop/util/IBopSavable.java	/^public interface IBopSavable {$/;"	i
+ItemList	src/main/java/mc/bop/util/ItemList.java	/^public class ItemList {$/;"	c
+Main	src/main/java/mc/bop/Main.java	/^public class Main extends JavaPlugin {$/;"	c
+MainTest	src/test/java/mc/bop/MainTest.java	/^public class MainTest {$/;"	c
+OwOToggle	src/main/java/mc/bop/commands/OwOToggle.java	/^public class OwOToggle implements CommandExecutor {$/;"	c
+SoupStaff	src/main/java/mc/bop/uniqueItems/SoupStaff.java	/^    public SoupStaff() {$/;"	m	class:SoupStaff
+SoupStaff	src/main/java/mc/bop/uniqueItems/SoupStaff.java	/^public class SoupStaff extends ItemStack implements BopItem {$/;"	c
+WhipItem	src/main/java/mc/bop/uniqueItems/WhipItem.java	/^    public WhipItem() {$/;"	m	class:WhipItem
+WhipItem	src/main/java/mc/bop/uniqueItems/WhipItem.java	/^public class WhipItem extends ItemStack implements BopItem {$/;"	c
+abilities	pom.xml	/^  <artifactId>abilities<\/artifactId>$/;"	a	groupId:mc.bop
+actionVerify	src/main/java/mc/bop/EventHandlers.java	/^    private boolean actionVerify(Action a) {$/;"	m	class:EventHandlers	file:
+adrianString	src/main/java/mc/bop/EventHandlers.java	/^    private String adrianString = "GARY! YOU ARE GONNA FINISH YOUR DESSERT, AND YOU ARE GONNA LI/;"	f	class:EventHandlers	file:
+adrianVegan	src/main/java/mc/bop/EventHandlers.java	/^    public void adrianVegan(PlayerItemConsumeEvent e) {$/;"	m	class:EventHandlers
+artifactId	target/maven-archiver/pom.properties	/^artifactId=abilities$/;"	k
+customItems	src/main/java/mc/bop/util/ItemList.java	/^        public static Map<String, ItemStack> customItems = Stream$/;"	f	class:ItemList
+dimCompass	src/main/java/mc/bop/EventHandlers.java	/^    public void dimCompass(PlayerInteractEvent e) {$/;"	m	class:EventHandlers
+dogString	src/main/java/mc/bop/EventHandlers.java	/^    private String dogString = "EVERY TIME I CLOSE MY EYES TO SLEEP AT NIGHT, I THINK OF THE LIV/;"	f	class:EventHandlers	file:
+explode	src/main/java/mc/bop/EventHandlers.java	/^    private void explode(Player p) {$/;"	m	class:EventHandlers	file:
+getLore	src/main/java/mc/bop/uniqueItems/BopItem.java	/^    public String getLore();$/;"	m	interface:BopItem
+getLore	src/main/java/mc/bop/uniqueItems/DimensionalCompassItem.java	/^    public String getLore() {$/;"	m	class:DimensionalCompassItem
+getLore	src/main/java/mc/bop/uniqueItems/ExcaliburItem.java	/^    public String getLore() {$/;"	m	class:ExcaliburItem
+getLore	src/main/java/mc/bop/uniqueItems/FeedingHoeItem.java	/^    public String getLore() {$/;"	m	class:FeedingHoeItem
+getLore	src/main/java/mc/bop/uniqueItems/SoupStaff.java	/^    public String getLore() {$/;"	m	class:SoupStaff
+getLore	src/main/java/mc/bop/uniqueItems/WhipItem.java	/^    public String getLore() {$/;"	m	class:WhipItem
+getRandomPotionEffect	src/main/java/mc/bop/EventHandlers.java	/^    private PotionEffectType getRandomPotionEffect() {$/;"	m	class:EventHandlers	file:
+groupId	target/maven-archiver/pom.properties	/^groupId=mc.bop$/;"	k
+itemLore	src/main/java/mc/bop/uniqueItems/DimensionalCompassItem.java	/^    public String itemLore = "\\"Vanish in smoke.\\"";$/;"	f	class:DimensionalCompassItem
+itemLore	src/main/java/mc/bop/uniqueItems/ExcaliburItem.java	/^    public String itemLore = "\\"Perhaps this thing is a little too flashy?\\"";$/;"	f	class:ExcaliburItem
+itemLore	src/main/java/mc/bop/uniqueItems/FeedingHoeItem.java	/^    public static String itemLore = "\\"Unwrap a smile!~\\"";$/;"	f	class:FeedingHoeItem
+itemLore	src/main/java/mc/bop/uniqueItems/SoupStaff.java	/^    public String itemLore = "\\"eat up moron\\"";$/;"	f	class:SoupStaff
+itemLore	src/main/java/mc/bop/uniqueItems/WhipItem.java	/^    public static String itemLore = "\\"The beatings shall continue until morale improves...\\""/;"	f	class:WhipItem
+itemName	src/main/java/mc/bop/uniqueItems/DimensionalCompassItem.java	/^    public String itemName = "Hellbound Compass";$/;"	f	class:DimensionalCompassItem
+itemName	src/main/java/mc/bop/uniqueItems/ExcaliburItem.java	/^    public String itemName = "Excalibur";$/;"	f	class:ExcaliburItem
+itemName	src/main/java/mc/bop/uniqueItems/FeedingHoeItem.java	/^    static String itemName = "Lil' Debbie's Snack Cakes";$/;"	f	class:FeedingHoeItem
+itemName	src/main/java/mc/bop/uniqueItems/SoupStaff.java	/^    public String itemName = "The Soup Staff";$/;"	f	class:SoupStaff
+itemName	src/main/java/mc/bop/uniqueItems/WhipItem.java	/^    static String itemName = "The Whip";$/;"	f	class:WhipItem
+itemVerify	src/main/java/mc/bop/EventHandlers.java	/^    private boolean itemVerify(ItemStack eItem, BopItem itemToCheckAgainst) {$/;"	m	class:EventHandlers	file:
+lightningSword	src/main/java/mc/bop/EventHandlers.java	/^    public void lightningSword(PlayerInteractEvent e) {$/;"	m	class:EventHandlers
+load	src/main/java/mc/bop/util/IBopSavable.java	/^    public boolean load();$/;"	m	interface:IBopSavable
+maven.compiler.source	pom.xml	/^    <maven.compiler.source>11<\/maven.compiler.source>$/;"	p
+maven.compiler.target	pom.xml	/^    <maven.compiler.target>11<\/maven.compiler.target>$/;"	p
+mc.bop	pom.xml	/^  <groupId>mc.bop<\/groupId>$/;"	g
+mc.bop	src/main/java/mc/bop/EventHandlers.java	/^package mc.bop;$/;"	p
+mc.bop	src/main/java/mc/bop/Main.java	/^package mc.bop;$/;"	p
+mc.bop	src/test/java/mc/bop/MainTest.java	/^package mc.bop;$/;"	p
+mc.bop.commands	src/main/java/mc/bop/commands/BopTabCompleter.java	/^package mc.bop.commands;$/;"	p
+mc.bop.commands	src/main/java/mc/bop/commands/GiveBopItem.java	/^package mc.bop.commands;$/;"	p
+mc.bop.commands	src/main/java/mc/bop/commands/OwOToggle.java	/^package mc.bop.commands;$/;"	p
+mc.bop.uniqueItems	src/main/java/mc/bop/uniqueItems/BopItem.java	/^package mc.bop.uniqueItems;$/;"	p
+mc.bop.uniqueItems	src/main/java/mc/bop/uniqueItems/DimensionalCompassItem.java	/^package mc.bop.uniqueItems;$/;"	p
+mc.bop.uniqueItems	src/main/java/mc/bop/uniqueItems/ExcaliburItem.java	/^package mc.bop.uniqueItems;$/;"	p
+mc.bop.uniqueItems	src/main/java/mc/bop/uniqueItems/FeedingHoeItem.java	/^package mc.bop.uniqueItems;$/;"	p
+mc.bop.uniqueItems	src/main/java/mc/bop/uniqueItems/SoupStaff.java	/^package mc.bop.uniqueItems;$/;"	p
+mc.bop.uniqueItems	src/main/java/mc/bop/uniqueItems/WhipItem.java	/^package mc.bop.uniqueItems;$/;"	p
+mc.bop.util	src/main/java/mc/bop/util/ItemList.java	/^package mc.bop.util;$/;"	p
+meats	src/main/java/mc/bop/EventHandlers.java	/^    private ArrayList<Material> meats = new ArrayList<Material>($/;"	f	class:EventHandlers	file:
+nameCheck	src/main/java/mc/bop/EventHandlers.java	/^    private boolean nameCheck(String name, Player p) {$/;"	m	class:EventHandlers	file:
+nsbbf684f00101	pom.xml	/^<project xmlns="http:\/\/maven.apache.org\/POM\/4.0.0" xmlns:xsi="http:\/\/www.w3.org\/2001\/XML/;"	n	uri:http://maven.apache.org/POM/4.0.0
+oliverInsomnia	src/main/java/mc/bop/EventHandlers.java	/^    public void oliverInsomnia(PlayerBedEnterEvent e) {$/;"	m	class:EventHandlers
+onCommand	src/main/java/mc/bop/commands/GiveBopItem.java	/^    public boolean onCommand(CommandSender sender, Command command, String label, String[] args)/;"	m	class:GiveBopItem
+onCommand	src/main/java/mc/bop/commands/OwOToggle.java	/^    public boolean onCommand(CommandSender p, Command cmd, String alias, String[] args) {$/;"	m	class:OwOToggle
+onDisable	src/main/java/mc/bop/Main.java	/^    public void onDisable() {$/;"	m	class:Main
+onDogEat	src/main/java/mc/bop/EventHandlers.java	/^    public void onDogEat(PlayerItemConsumeEvent e) {$/;"	m	class:EventHandlers
+onEnable	src/main/java/mc/bop/Main.java	/^    public void onEnable() {$/;"	m	class:Main
+onPlayerChatMessage	src/main/java/mc/bop/EventHandlers.java	/^    public void onPlayerChatMessage(AsyncPlayerChatEvent e) {$/;"	m	class:EventHandlers
+onTabComplete	src/main/java/mc/bop/commands/BopTabCompleter.java	/^    public List<String> onTabComplete(CommandSender sender, Command command, String alias, Strin/;"	m	class:BopTabCompleter
+owoify	src/main/java/mc/bop/EventHandlers.java	/^    private String owoify(String s) {$/;"	m	class:EventHandlers	file:
+project.build.sourceEncoding	pom.xml	/^    <project.build.sourceEncoding>UTF-8<\/project.build.sourceEncoding>$/;"	p
+save	src/main/java/mc/bop/util/IBopSavable.java	/^    public boolean save();$/;"	m	interface:IBopSavable
+shouldAnswerWithTrue	src/test/java/mc/bop/MainTest.java	/^    public void shouldAnswerWithTrue() {$/;"	m	class:MainTest
+soupStaff	src/main/java/mc/bop/EventHandlers.java	/^    public void soupStaff(EntityDamageByEntityEvent e) {$/;"	m	class:EventHandlers
+spigot-repo	pom.xml	/^      <id>spigot-repo<\/id>$/;"	r
+validPotionTypes	src/main/java/mc/bop/EventHandlers.java	/^    private ArrayList<PotionEffectType> validPotionTypes = new ArrayList<PotionEffectType>($/;"	f	class:EventHandlers	file:
+version	target/maven-archiver/pom.properties	/^version=1.1$/;"	k
+whipEvent	src/main/java/mc/bop/EventHandlers.java	/^    public void whipEvent(EntityDamageByEntityEvent e) {$/;"	m	class:EventHandlers
+xsi	pom.xml	/^<project xmlns="http:\/\/maven.apache.org\/POM\/4.0.0" xmlns:xsi="http:\/\/www.w3.org\/2001\/XML/;"	n	uri:http://www.w3.org/2001/XMLSchema-instance
+xsi	target/surefire-reports/TEST-mc.bop.MainTest.xml	/^<testsuite xmlns:xsi="http:\/\/www.w3.org\/2001\/XMLSchema-instance" xsi:noNamespaceSchemaLocati/;"	n	uri:http://www.w3.org/2001/XMLSchema-instance
