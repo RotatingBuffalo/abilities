@@ -7,6 +7,9 @@ commands:
     description: Gives one of this plugin's unique items, such as Excaliber or the Dimensional Compass.
     usage: /giveBopItem Dimensional_Compass
     permission: bopmcplugin.admin
+  owoToggle:
+    description: Toggles Owoification of a player's messages. When called with no arguments, will toggle owo on self, but will accept other players as arguments.
+    usage: /owoToggle (PlayerName)
 permissions:
   bop.*:
     description: Gives access to all BopSMP commands.

@@ -18,8 +18,12 @@ import mc.bop.util.BopPlayer;
 public class Main extends JavaPlugin {
     private static ArrayList<BopPlayer> pBopPlayers = new ArrayList<BopPlayer>(new LinkedHashSet<BopPlayer>());
 
-    public static void addPlayer(BopPlayer p) {
-        pBopPlayers.add(p);
+    public static ArrayList<BopPlayer> getBopPlayersList() {
+        return pBopPlayers;
+    }
+
+    public static boolean addPlayer(BopPlayer p) {
+        return pBopPlayers.add(p);
     }
 
     public static BopPlayer getBopPlayer(UUID id) {

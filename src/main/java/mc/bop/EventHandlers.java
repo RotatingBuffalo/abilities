@@ -75,6 +75,9 @@ public class EventHandlers implements Listener {
         if (eItem == null) {
             return false;
         }
+        if (eItem.getItemMeta() == null) {
+            return false;
+        }
         if (eItem.getItemMeta().getLore() == null) {
             return false;
         }
