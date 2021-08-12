@@ -39,8 +39,10 @@ public class Main extends JavaPlugin {
     public void onEnable() {
         // create a BopPlayer object for every file in $(PluginDirectory)/PlayerData/
         // add the loaded BopPlayers to pBopPlayers
-        // finally, call .load() for every element in pBopPlayers
+        // finally, call .load() for every element in pBopPlayer
+
         File datFolder = new File(this.getDataFolder() + File.separator + "PlayerData" + File.separator);
+        datFolder.mkdir();
         if (datFolder.listFiles() != null) {
             for (int i = 0; i < datFolder.listFiles().length; i++) {
                 File currentFile = datFolder.listFiles()[i];
@@ -54,7 +56,7 @@ public class Main extends JavaPlugin {
             }
         }
 
-        getLogger().info("BOPSMP PLUGIN v1.2 ACTIVATING");
+        getLogger().info("BOPSMP PLUGIN v2 ACTIVATING");
         this.getCommand("giveBopItem").setExecutor(new GiveBopItem());
         this.getCommand("giveBopItem").setTabCompleter(new BopTabCompleter());
         getServer().getPluginManager().registerEvents(new EventHandlers(), this);
@@ -81,6 +83,6 @@ public class Main extends JavaPlugin {
                 e.printStackTrace();
             }
         }
-        getLogger().info("BOPSMP PLUGIN v1.1 SHUTTING DOWN");
+        getLogger().info("BOPSMP PLUGIN v2 SHUTTING DOWN");
     }
 }

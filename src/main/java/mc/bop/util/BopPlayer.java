@@ -22,9 +22,7 @@ public class BopPlayer {
     }
 
     public void toggleOwO() {
-        // this is horrifying lmao
-        // i hate wrapper classes i hate wrapper classes i hate them
-        OwOtoggled = Boolean.valueOf(!OwOtoggled.booleanValue());
+        OwOtoggled = !OwOtoggled;
     }
 
     public BopPlayer(Player p) {
